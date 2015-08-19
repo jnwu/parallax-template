@@ -46,7 +46,10 @@ section.module.parallax-2 {
   background-image: url("../img/demo/_small/2.jpg");
 }
 section.module.parallax-3 {
-  background-image: url("../img/effie2.jpg");
+  background-image: url("../img/effie4.jpg");
+}
+section.module.parallax-4 {
+  background-image: url("../img/capitol2.jpg");
 }
 
 @media all and (min-width: 600px) {
