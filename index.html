@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/ideal-image-slider.css">
   <link rel="stylesheet" href="css/themes/default/default.css">
-  <link rel="stylesheet" href="css/jquery.accordion.css">
 
   <style media="screen">
     #slider { 
@@ -21,7 +20,7 @@
     }
 
     .scrolloff {
-        pointer-events: none;
+      pointer-events: none;
     }
 
     .opacity-on {
@@ -41,16 +40,17 @@
         -o-transition: opacity 0.5s ease-in-out;
         transition: opacity 0.5s ease-in-out;
     }
-
   </style>
 </head>
 <body>
   <div class="wrapper">
-    <div id="menu-bar" class="info-bar opacity-on" style="z-index: 100;">
+    <div id="menu-bar" class="info-bar opacity-on" style="z-index: 100;" >
       <div class="container">
         <img src="http://icons.iconarchive.com/icons/blackvariant/button-ui-requests-2/1024/Sophos-icon.png" />
+        <a class="scroll" href="#slider">Home</a>
         <a class="scroll" href="#info">Info</a>
         <a class="scroll" href="#map">Map</a>
+        <a class="scroll" href="#capitol">Capitol</a>
         <a class="scroll" href="#contact">Contact</a>
       </div>
     </div>
@@ -72,28 +72,26 @@
         </div>
       </section>
 
-      <section class="module parallax parallax-4" id="tickets" style="height: 300px;">
-        <div class="container">
-        </div>
+      <section class="module parallax parallax-3">
       </section>
 
-      <section class="module content" id="teams" style="height: 300px">
+      <section class="module content">
         <div class="container">
-          <h2 style="font-size: 45px; vertical-align: middle; line-height: 200px;">
+          <h2 style="font-size: 45px; vertical-align: middle; line-height: 350px;">
             <img src="http://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-hi.png" style="height: 50px; width: 65px" />
-            Here's some advice. Stay Alive
+            May the odds be ever in your favor
             <img src="http://www.svensktflyg.se/wp-content/themes/svensktflyg/img/quotation-marks-right.png" style="height: 50px; width: 65px" />
           </h2>
         </div>
       </section>
 
-      <section class="module parallax parallax-2" id="map" style="height:450px">
+      <section class="module parallax" id="map" style="height:450px">
           <iframe id="google-map-frame" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d10408.789136824094!2d-123.13469722786255!3d49.29160582763241!2m3    !1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x54867178b16fcacb%3A0x64156294187032ed!2sSophos+Inc%2C+Vancouver%2C+BC!3m2!1d4    9.283818!2d-123.11608!4m5!1s0x0%3A0xa70e30bd4040fdf5!2sBrockton+Clubhouse!3m2!1d49.2990918!2d-123.12442829999999!5e0!3m2!1sen!2sca!    4v1438983654308" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
       </section>
 
-      <section class="module content" id="teams" style="height: 300px">
+      <section class="module content">
         <div class="container">
-          <h2 style="font-size: 45px; vertical-align: middle; line-height: 200px;">
+          <h2  style="font-size: 45px; vertical-align: middle; line-height: 350px;">
             <img src="http://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-hi.png" style="height: 50px; width: 65px;" />
             There is no place for a girl <span style="font-style: italic;">On Fire</span>
             <img src="http://www.svensktflyg.se/wp-content/themes/svensktflyg/img/quotation-marks-right.png" style="height: 50px; width: 65px" />
@@ -101,17 +99,23 @@
         </div>
       </section>
 
-      <section class="module parallax parallax-3" id="tickets" style="height: 300px;">
+      <section class="module parallax parallax-4">
+      </section>
+
+      <section class="module content">
         <div class="container">
+          <h2 style="font-size: 45px; vertical-align: middle; line-height: 350px;">
+            <img src="http://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-hi.png" style="height: 50px; width: 65px" />
+            Here's some advice. Stay Alive
+            <img src="http://www.svensktflyg.se/wp-content/themes/svensktflyg/img/quotation-marks-right.png" style="height: 50px; width: 65px" />
+          </h2>
         </div>
       </section>
 
-      <section class="module content" style="height: 300px">
+      <section class="module content" id="capitol">
         <div class="container">
-          <h2 style="font-size: 45px; vertical-align: middle; line-height: 200px;">
-            <img src="http://www.clker.com/cliparts/r/L/A/C/5/b/gray-quotation-marks-hi.png" style="height: 50px; width: 65px" />
-            May the odds be ever in your favor
-            <img src="http://www.svensktflyg.se/wp-content/themes/svensktflyg/img/quotation-marks-right.png" style="height: 50px; width: 65px" />
+          <h2>Capitol</h2>
+            <img src="img/panda.png" style="height: 200px; width: 200px"/>
           </h2>
         </div>
       </section>
@@ -133,11 +137,10 @@
   <script src="js/scroll.min.js"></script>
   <script src="js/ideal-image-slider.min.js"></script>
   <script src="js/iis-captions.js"></script>
-  <script type="text/javascript" src="js/jquery.accordion.js"></script>
 	<script>
     var slider = new IdealImageSlider.Slider({
       selector: '#slider',
-      height: 675
+      height: $(window).height()
     });
         
     slider.addCaptions();
@@ -145,10 +148,6 @@
 	</script>
 
   <script>
-    $('.accordion').accordion({
-        "transitionSpeed": 400
-    });
-
     // enable scroll event for google map frame only on click
     $(document).ready(function () {
       $('#menu-bar').mouseover(function() {
